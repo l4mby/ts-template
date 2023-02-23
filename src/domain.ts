@@ -9,8 +9,8 @@ export type ValidateAge = FieldsNotEmpty
 export type ValidateGender = FieldsNotEmpty
 export type ValidateNotGerman = FieldsNotEmpty
 
-export interface FirstName extends Newtype<{ readonly FirstName: unique symbol }, string> {}
-export interface LastName extends Newtype<{ readonly LastName: unique symbol }, string> {}
+export type FirstName = Newtype<{ readonly FirstName: unique symbol }, string>
+export type LastName = Newtype<{ readonly LastName: unique symbol }, string>
 
 export const firstNameIso = iso<FirstName>()
 export const lastNameIso = iso<LastName>()
